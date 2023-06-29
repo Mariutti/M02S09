@@ -21,7 +21,7 @@ public class ExercicioM02S09Application {
 // classe deverá conter os atributos: Id, name, email e status. O “id” será chave da tabela com o tipo Long, name e
 // email serão String e status Boolean.
 
-//TODO EX 03 Efetue a criação do repositório da entidade de Pessoas e adicione-o no service de Pessoas para
+//EX 03 Efetue a criação do repositório da entidade de Pessoas e adicione-o no service de Pessoas para
 // utilizarmos nos próximos exercícios.
 
 //TODO EX 04 Após a criação do repository, crie um método de inclusão no service e uma rota no controller que
