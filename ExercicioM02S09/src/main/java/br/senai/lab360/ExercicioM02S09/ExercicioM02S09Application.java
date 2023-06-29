@@ -13,7 +13,7 @@ public class ExercicioM02S09Application {
 }
 
 
-//TODO EX 01 Essa semana vamos trabalhar com banco de dados no nossos projeto de Spring. Inicialmente vamos precisar
+//EX 01 Essa semana vamos trabalhar com banco de dados no nossos projeto de Spring. Inicialmente vamos precisar
 // configurar nosso projeto para que efetue a conexão com o DB. Adicione a dependência do JPA no projeto e o driver
 // de acordo com o RDBMS. Efetue a configuração no application.properties.
 
