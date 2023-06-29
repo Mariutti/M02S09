@@ -17,7 +17,7 @@ public class ExercicioM02S09Application {
 // configurar nosso projeto para que efetue a conexão com o DB. Adicione a dependência do JPA no projeto e o driver
 // de acordo com o RDBMS. Efetue a configuração no application.properties.
 
-//TODO EX 02 Após a configuração efetuada no exercício anterior, vamos criar uma entidade chamada “Pessoa”. Essa
+//EX 02 Após a configuração efetuada no exercício anterior, vamos criar uma entidade chamada “Pessoa”. Essa
 // classe deverá conter os atributos: Id, name, email e status. O “id” será chave da tabela com o tipo Long, name e
 // email serão String e status Boolean.
 
