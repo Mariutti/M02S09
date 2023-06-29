@@ -24,7 +24,7 @@ public class ExercicioM02S09Application {
 //EX 03 Efetue a criação do repositório da entidade de Pessoas e adicione-o no service de Pessoas para
 // utilizarmos nos próximos exercícios.
 
-//TODO EX 04 Após a criação do repository, crie um método de inclusão no service e uma rota no controller que
+//EX 04 Após a criação do repository, crie um método de inclusão no service e uma rota no controller que
 // receberá uma pessoa que salvará no banco ao ser invocado o save no service.
 
 //TODO EX 05 Contendo dados no banco, crie no service um método que retornará todas as pessoas utilizando o
