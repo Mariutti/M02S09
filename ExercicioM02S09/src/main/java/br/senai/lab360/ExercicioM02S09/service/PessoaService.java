@@ -5,6 +5,7 @@ import br.senai.lab360.ExercicioM02S09.repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PessoaService {
@@ -21,5 +22,9 @@ public class PessoaService {
 
     public List<Pessoa> getPessoas() {
         return this.pessoaRepository.findAll();
+    }
+
+    public Optional<Pessoa> getPessoaById(Long id) {
+        return this.pessoaRepository.findById(id);
     }
 }

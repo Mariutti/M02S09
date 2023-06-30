@@ -27,7 +27,7 @@ public class ExercicioM02S09Application {
 //EX 04 Após a criação do repository, crie um método de inclusão no service e uma rota no controller que
 // receberá uma pessoa que salvará no banco ao ser invocado o save no service.
 
-//TODO EX 05 Contendo dados no banco, crie no service um método que retornará todas as pessoas utilizando o
+//EX 05 Contendo dados no banco, crie no service um método que retornará todas as pessoas utilizando o
 // repository. Mapeie esse método com a rota equivalente no Controller.
 
 //TODO EX 06 Agora, crie um método que receberá um ID como parâmetro e retornará apenas a pessoa correspondente.
