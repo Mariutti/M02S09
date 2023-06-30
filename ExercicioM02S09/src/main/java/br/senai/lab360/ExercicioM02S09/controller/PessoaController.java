@@ -29,4 +29,9 @@ public class PessoaController {
         return this.pessoaService.getPessoaById(id);
     }
 
+    @GetMapping("/true")
+    public List<Pessoa> findByStatusTrue(){
+        return this.pessoaService.findByStatusTrue();
+    }
+
 }

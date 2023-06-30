@@ -30,7 +30,7 @@ public class ExercicioM02S09Application {
 //EX 05 Contendo dados no banco, crie no service um método que retornará todas as pessoas utilizando o
 // repository. Mapeie esse método com a rota equivalente no Controller.
 
-//TODO EX 06 Agora, crie um método que receberá um ID como parâmetro e retornará apenas a pessoa correspondente.
+//EX 06 Agora, crie um método que receberá um ID como parâmetro e retornará apenas a pessoa correspondente.
 // Mapeie esse método com a rota equivalente no Controller.
 
 //TODO EX 07 Crie um método no repositório que busque apenas as pessoas que estiverem com o status “true”. Assim

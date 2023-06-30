@@ -27,4 +27,9 @@ public class PessoaService {
     public Optional<Pessoa> getPessoaById(Long id) {
         return this.pessoaRepository.findById(id);
     }
+
+
+    public List<Pessoa> findByStatusTrue() {
+        return this.pessoaRepository.findByStatusTrue();
+    }
 }
