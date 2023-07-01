@@ -32,4 +32,21 @@ public class PessoaService {
     public List<Pessoa> findByStatusTrue() {
         return this.pessoaRepository.findByStatusTrue();
     }
+
+    public Pessoa updatePessoa(Pessoa pessoa, Long id) {
+        Optional<Pessoa> pessoaToUptade = this.pessoaRepository.findById(id);
+        if (pessoaToUptade.isPresent()) {
+            Pessoa pessoaFound = pessoaToUptade.get();
+            if (pessoa.getName() != null){
+                pessoaFound.setName(pessoa.getName());
+            }
+            if(pessoa.getEmail() != null){
+                pessoaFound.setEmail(pessoa.getEmail());
+            }
+            pessoaFound.setStatus(pessoa.isStatus());
+            this.pessoaRepository.save(pessoaFound);
+            return pessoaFound;
+        }
+        return null;
+    }
 }

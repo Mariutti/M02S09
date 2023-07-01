@@ -34,4 +34,10 @@ public class PessoaController {
         return this.pessoaService.findByStatusTrue();
     }
 
+    //Implementação do método PUT
+    @PutMapping("/{id}")
+    public Pessoa updatePessoa(@RequestBody Pessoa pessoa, @PathVariable Long id){
+        return this.pessoaService.updatePessoa(pessoa, id);
+    }
+
 }

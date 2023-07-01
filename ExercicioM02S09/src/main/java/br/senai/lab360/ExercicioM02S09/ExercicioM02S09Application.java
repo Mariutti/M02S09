@@ -33,7 +33,7 @@ public class ExercicioM02S09Application {
 //EX 06 Agora, crie um método que receberá um ID como parâmetro e retornará apenas a pessoa correspondente.
 // Mapeie esse método com a rota equivalente no Controller.
 
-//TODO EX 07 Crie um método no repositório que busque apenas as pessoas que estiverem com o status “true”. Assim
+//EX 07 Crie um método no repositório que busque apenas as pessoas que estiverem com o status “true”. Assim
 // como nos exercício anteriores, crie uma rota no controller, chama o service que irá buscar no repository esse método.
 
 //TODO EX 08 Crie um método no service que receberá como parâmetro um objeto de Pessoa e se informado o ID e
