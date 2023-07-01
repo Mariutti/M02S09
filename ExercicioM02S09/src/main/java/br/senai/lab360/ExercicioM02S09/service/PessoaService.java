@@ -49,4 +49,8 @@ public class PessoaService {
         }
         return null;
     }
+
+    public void deletePessoaById(Long idPessoa) {
+        this.pessoaRepository.deleteById(idPessoa);
+    }
 }
