@@ -1,16 +1,14 @@
 package br.senai.lab360.ExercicioM02S09.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Pessoa {
+@Table(name="pessoa")
+public class PessoaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

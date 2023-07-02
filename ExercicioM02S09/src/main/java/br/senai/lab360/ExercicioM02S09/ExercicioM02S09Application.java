@@ -39,7 +39,7 @@ public class ExercicioM02S09Application {
 //EX 08 Crie um método no service que receberá como parâmetro um objeto de Pessoa e se informado o ID e
 // estiver na base, que efetue a atualização do objeto.
 
-//TODO EX 09 Crie um método no service que receberá o id de uma pessoa, chame o método de delete do repository
+//EX 09 Crie um método no service que receberá o id de uma pessoa, chame o método de delete do repository
 // para aquele id. Assim como nos exercícios anteriores, crie uma rota no controller, chama o service que irá buscar
 // no repository esse método.
 

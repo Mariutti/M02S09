@@ -1,6 +1,6 @@
 package br.senai.lab360.ExercicioM02S09.service;
 
-import br.senai.lab360.ExercicioM02S09.entity.Pessoa;
+import br.senai.lab360.ExercicioM02S09.entity.PessoaEntity;
 import br.senai.lab360.ExercicioM02S09.repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 
@@ -16,36 +16,44 @@ public class PessoaService {
     }
 
 
-    public Pessoa addPessoa(Pessoa pessoa) {
-        return this.pessoaRepository.save(pessoa);
+    public PessoaEntity addPessoa(PessoaEntity pessoaEntity) {
+        return this.pessoaRepository.save(pessoaEntity);
     }
 
-    public List<Pessoa> getPessoas() {
-        return this.pessoaRepository.findAll();
+    public List<PessoaEntity> getPessoas(String filter) {
+        if (filter==null || filter.isEmpty()) {
+
+            return this.pessoaRepository.findAll();
+        }
+        return this.pessoaRepository.findAllByFilter(filter);
     }
 
-    public Optional<Pessoa> getPessoaById(Long id) {
-        return this.pessoaRepository.findById(id);
+    public PessoaEntity getPessoaById(Long id) {
+        Optional<PessoaEntity> byId = this.pessoaRepository.findById(id);
+        if (byId.isPresent()) {
+            return byId.get();
+        }
+        return null;
     }
 
 
-    public List<Pessoa> findByStatusTrue() {
+    public List<PessoaEntity> findByStatusTrue() {
         return this.pessoaRepository.findByStatusTrue();
     }
 
-    public Pessoa updatePessoa(Pessoa pessoa, Long id) {
-        Optional<Pessoa> pessoaToUptade = this.pessoaRepository.findById(id);
+    public PessoaEntity updatePessoa(PessoaEntity pessoaEntity, Long id) {
+        Optional<PessoaEntity> pessoaToUptade = this.pessoaRepository.findById(id);
         if (pessoaToUptade.isPresent()) {
-            Pessoa pessoaFound = pessoaToUptade.get();
-            if (pessoa.getName() != null){
-                pessoaFound.setName(pessoa.getName());
+            PessoaEntity pessoaEntityFound = pessoaToUptade.get();
+            if (pessoaEntity.getName() != null) {
+                pessoaEntityFound.setName(pessoaEntity.getName());
             }
-            if(pessoa.getEmail() != null){
-                pessoaFound.setEmail(pessoa.getEmail());
+            if (pessoaEntity.getEmail() != null) {
+                pessoaEntityFound.setEmail(pessoaEntity.getEmail());
             }
-            pessoaFound.setStatus(pessoa.isStatus());
-            this.pessoaRepository.save(pessoaFound);
-            return pessoaFound;
+            pessoaEntityFound.setStatus(pessoaEntity.isStatus());
+            this.pessoaRepository.save(pessoaEntityFound);
+            return pessoaEntityFound;
         }
         return null;
     }
@@ -53,4 +61,6 @@ public class PessoaService {
     public void deletePessoaById(Long idPessoa) {
         this.pessoaRepository.deleteById(idPessoa);
     }
+
+
 }
